@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F55707E6-CD8B-4573-AD03-3EA09630DE71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>预约系统2._0</RootNamespace>
+    <AssemblyName>预约系统2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>G:\VS2015 worksfiles\新建文件夹\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E6BF9A57701DEE6996C3B5376C3073F7934D5B62</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>预约系统2.0_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Chloe, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chloe.3.4.0\lib\net40\Chloe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Chloe.SqlServer, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chloe.SqlServer.3.4.0\lib\net40\Chloe.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chloe_control.cs" />
+    <Compile Include="Count_pay2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Count_pay2.Designer.cs">
+      <DependentUpon>Count_pay2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FK_jianyi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FK_jianyi.Designer.cs">
+      <DependentUpon>FK_jianyi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FK_jubao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FK_jubao.Designer.cs">
+      <DependentUpon>FK_jubao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY_check_PAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_check_PAY.Designer.cs">
+      <DependentUpon>GLY_check_PAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY_yiyuyue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_yiyuyue.Designer.cs">
+      <DependentUpon>GLY_yiyuyue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note_chakan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_chakan.Designer.cs">
+      <DependentUpon>Note_chakan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note_lurucangdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_lurucangdi.Designer.cs">
+      <DependentUpon>Note_lurucangdi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note_lurugonggaolan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_lurugonggaolan.Designer.cs">
+      <DependentUpon>Note_lurugonggaolan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note_luruxitong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_luruxitong.Designer.cs">
+      <DependentUpon>Note_luruxitong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note_qinglii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_qinglii.Designer.cs">
+      <DependentUpon>Note_qinglii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ONLY_ADD_USER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ONLY_ADD_USER.Designer.cs">
+      <DependentUpon>ONLY_ADD_USER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_JS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_JS.Designer.cs">
+      <DependentUpon>YH_JS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_quxiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_quxiao.Designer.cs">
+      <DependentUpon>YH_quxiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yard_chakan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yard_chakan.Designer.cs">
+      <DependentUpon>Yard_chakan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yard_xiugai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yard_xiugai.Designer.cs">
+      <DependentUpon>Yard_xiugai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY_chazhao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_chazhao.Designer.cs">
+      <DependentUpon>GLY_chazhao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY.Designer.cs">
+      <DependentUpon>GLY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY_heimingdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_heimingdan.Designer.cs">
+      <DependentUpon>GLY_heimingdan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GLY_xiugai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_xiugai.Designer.cs">
+      <DependentUpon>GLY_xiugai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yard_luru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yard_luru.Designer.cs">
+      <DependentUpon>Yard_luru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH.Designer.cs">
+      <DependentUpon>YH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLY_zhuce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLY_zhuce.Designer.cs">
+      <DependentUpon>GLY_zhuce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_KanNote_CD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_KanNote_CD.Designer.cs">
+      <DependentUpon>YH_KanNote_CD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_KanNote_GGL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_KanNote_GGL.Designer.cs">
+      <DependentUpon>YH_KanNote_GGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_KanNote_XT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_KanNote_XT.Designer.cs">
+      <DependentUpon>YH_KanNote_XT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_YuDingYard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_YuDingYard.Designer.cs">
+      <DependentUpon>YH_YuDingYard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_KanYongHu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_KanYongHu.Designer.cs">
+      <DependentUpon>YH_KanYongHu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_Report.Designer.cs">
+      <DependentUpon>YH_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_Suggestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_Suggestion.Designer.cs">
+      <DependentUpon>YH_Suggestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YH_xiugaiyonghu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YH_xiugaiyonghu.Designer.cs">
+      <DependentUpon>YH_xiugaiyonghu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="场馆预约系统DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>场馆预约系统DataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Count_pay2.resx">
+      <DependentUpon>Count_pay2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FK_jianyi.resx">
+      <DependentUpon>FK_jianyi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FK_jubao.resx">
+      <DependentUpon>FK_jubao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY_check_PAY.resx">
+      <DependentUpon>GLY_check_PAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY_yiyuyue.resx">
+      <DependentUpon>GLY_yiyuyue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note_chakan.resx">
+      <DependentUpon>Note_chakan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note_lurucangdi.resx">
+      <DependentUpon>Note_lurucangdi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note_lurugonggaolan.resx">
+      <DependentUpon>Note_lurugonggaolan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note_luruxitong.resx">
+      <DependentUpon>Note_luruxitong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note_qinglii.resx">
+      <DependentUpon>Note_qinglii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ONLY_ADD_USER.resx">
+      <DependentUpon>ONLY_ADD_USER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_JS.resx">
+      <DependentUpon>YH_JS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_quxiao.resx">
+      <DependentUpon>YH_quxiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yard_chakan.resx">
+      <DependentUpon>Yard_chakan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yard_xiugai.resx">
+      <DependentUpon>Yard_xiugai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY_chazhao.resx">
+      <DependentUpon>GLY_chazhao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY.resx">
+      <DependentUpon>GLY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY_heimingdan.resx">
+      <DependentUpon>GLY_heimingdan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GLY_xiugai.resx">
+      <DependentUpon>GLY_xiugai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yard_luru.resx">
+      <DependentUpon>Yard_luru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH.resx">
+      <DependentUpon>YH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLY_zhuce.resx">
+      <DependentUpon>GLY_zhuce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_KanNote_CD.resx">
+      <DependentUpon>YH_KanNote_CD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_KanNote_GGL.resx">
+      <DependentUpon>YH_KanNote_GGL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_KanNote_XT.resx">
+      <DependentUpon>YH_KanNote_XT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_YuDingYard.resx">
+      <DependentUpon>YH_YuDingYard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_KanYongHu.resx">
+      <DependentUpon>YH_KanYongHu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_Report.resx">
+      <DependentUpon>YH_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_Suggestion.resx">
+      <DependentUpon>YH_Suggestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YH_xiugaiyonghu.resx">
+      <DependentUpon>YH_xiugaiyonghu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="场馆预约系统DataSet.xsc">
+      <DependentUpon>场馆预约系统DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet.xss">
+      <DependentUpon>场馆预约系统DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet1.xsc">
+      <DependentUpon>场馆预约系统DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet1.xss">
+      <DependentUpon>场馆预约系统DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet10.xsc">
+      <DependentUpon>场馆预约系统DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet10.xss">
+      <DependentUpon>场馆预约系统DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet11.xsc">
+      <DependentUpon>场馆预约系统DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet11.xss">
+      <DependentUpon>场馆预约系统DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet13.xsc">
+      <DependentUpon>场馆预约系统DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet13.xss">
+      <DependentUpon>场馆预约系统DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet14.xsc">
+      <DependentUpon>场馆预约系统DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet14.xss">
+      <DependentUpon>场馆预约系统DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet16.xsc">
+      <DependentUpon>场馆预约系统DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet16.xss">
+      <DependentUpon>场馆预约系统DataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet17.xsc">
+      <DependentUpon>场馆预约系统DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet17.xss">
+      <DependentUpon>场馆预约系统DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet18.xsc">
+      <DependentUpon>场馆预约系统DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet18.xss">
+      <DependentUpon>场馆预约系统DataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet19.xsc">
+      <DependentUpon>场馆预约系统DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet19.xss">
+      <DependentUpon>场馆预约系统DataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet2.xsc">
+      <DependentUpon>场馆预约系统DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet2.xss">
+      <DependentUpon>场馆预约系统DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet3.xsc">
+      <DependentUpon>场馆预约系统DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet3.xss">
+      <DependentUpon>场馆预约系统DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet4.xsc">
+      <DependentUpon>场馆预约系统DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet4.xss">
+      <DependentUpon>场馆预约系统DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet5.xsc">
+      <DependentUpon>场馆预约系统DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet5.xss">
+      <DependentUpon>场馆预约系统DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet6.xsc">
+      <DependentUpon>场馆预约系统DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet6.xss">
+      <DependentUpon>场馆预约系统DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet8.xsc">
+      <DependentUpon>场馆预约系统DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet8.xss">
+      <DependentUpon>场馆预约系统DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet9.xsc">
+      <DependentUpon>场馆预约系统DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="场馆预约系统DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>场馆预约系统DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="场馆预约系统DataSet9.xss">
+      <DependentUpon>场馆预约系统DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="预约系统2.0_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
